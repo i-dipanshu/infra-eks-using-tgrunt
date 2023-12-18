@@ -6,11 +6,11 @@ remote_state {
   }
 
   config = {
-    bucket = "lightfoot-eks-terraform-state"
+    bucket = "<bucket_name>"
     key = "${path_relative_to_include()}/terraform.tfstate"
-    region         = "us-east-1"
+    region         = "eu-west-1"
     encrypt        = true
-    dynamodb_table = "lightfoot-eks-terraform-lock-table"
+    dynamodb_table = "<dynamodb_table>"
   }
 }
 
@@ -20,5 +20,6 @@ generate "provider" {
   contents = <<EOF
 provider "aws" {
   region  = "eu-west-1"
+}
 EOF
 }
