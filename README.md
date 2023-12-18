@@ -1,2 +1,2 @@
-# infra-eks-using-tgrunt
-Creates an EKS cluster in a custom vpc using Terragrunt
+# EKS infrastructure in a custom high available VPC using Terragrunt
+
