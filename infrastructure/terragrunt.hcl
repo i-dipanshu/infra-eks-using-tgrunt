@@ -6,24 +6,13 @@ remote_state {
   }
 
   config = {
-    bucket = "lightfoot-tf-state-eks"
+    bucket = "<bucket_name>"
     key = "${path_relative_to_include()}/terraform.tfstate"
     region         = "eu-west-1"
     encrypt        = true
-    dynamodb_table = "tf-state-table-lock-eks"
+    dynamodb_table = "<db_table>"
   }
 }
-// remote_state {
-//   backend = "local"
-//   generate = {
-//     path      = "state.tf"
-//     if_exists = "overwrite_terragrunt"
-//   }
-
-//   config = {
-//     path = "${path_relative_to_include()}/terraform.tfstate"
-//   }
-// }
 
 generate "provider" {
   path = "provider.tf"
