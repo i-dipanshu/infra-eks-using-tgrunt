@@ -1,2 +1,2 @@
-# EKS infrastructure in a custom high available VPC using Terragrunt
+# EKS in a VPC using Terragrunt
 
